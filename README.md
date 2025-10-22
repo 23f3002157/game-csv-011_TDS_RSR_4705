@@ -1,47 +1,40 @@
-# Sales Summary Project
+# Currency Picker and Big Bang Story
 
-This project is a simple single-page website that fetches sales data from a CSV file, calculates the total sales, and displays the result using Bootstrap 5 for styling.
+This project implements a currency picker that allows users to choose between multiple currencies (USD, EUR, GBP) and dynamically updates the total sales value based on the selected currency. Additionally, a text file contains an informative 300-word story on the Big Bang.
 
 ## Features
 
-- Fetches `data.csv` file to retrieve sales data.
-- Computes the total sales from the sales column.
-- Displays the total sales in a styled alert box.
-- Utilizes Bootstrap 5 for responsive design.
-
-## Getting Started
-
-1. **Clone the repository** or download the files.
-2. **Set up a local server** because fetch calls may not work with local file access in browsers.
-3. Ensure the `data.csv` file exists in the same directory as `index.html`.
-4. Open `index.html` in your browser.
-
-## Files
-
-- `index.html`: The main HTML file that contains the structure and logic of the application.
-- `data.csv`: The CSV file that should contain sales data.
-- `cap.json`: A JSON file containing the capitals of five countries.
-
-Example of `cap.json`:
-
-```json
-{
-  "USA": "Washington, D.C.",
-  "Canada": "Ottawa",
-  "UK": "London",
-  "France": "Paris",
-  "Germany": "Berlin"
-}
-```
+- Currency selection dropdown to choose between USD, EUR, and GBP.
+- Fetches total sales data from a CSV file and displays it in the selected currency.
+- Uses Bootstrap for styling to provide a responsive design.
 
 ## Installation
 
-Include Bootstrap 5 in your project via CDN by adding the following link to your `index.html`:
+To run this project, simply clone the repository and open `index.html` in your browser. Ensure that `data.csv` is present in the same directory with the correct format for the total sales calculation.
 
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-```
+## Usage
+
+1. Open the `index.html` file in your web browser.
+2. Select a currency from the dropdown.
+3. The total sales will be recalculated and displayed in the chosen currency.
+
+## Changes Made
+
+- Added a `<select>` element to allow currency selection.
+- Introduced `currencyRates` object to handle conversion rates for USD, EUR, and GBP.
+- Modified the `fetchTotalSales()` function to convert the total sales value based on the selected currency and format the output accordingly.
+
+## Data Source
+
+- Ensure the presence of a `data.csv` file containing sales data in the following format:
+  ```
+  Product Name,Units Sold,Price
+  ```
+
+## Story
+
+The `story.txt` file contains a 300-word story on the Big Bang, discussing the origin of the universe, the formation of matter, and the evolution of cosmic structures.
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
